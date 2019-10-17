@@ -1,0 +1,346 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*-------------------------------------------------*/
+
+@font-face {
+    font-family: 'Autumn Leaves';
+    src: url('Fonts/AutumnLeaves.woff2') format('woff2'), url('Fonts/AutumnLeaves.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Edwardian Medium LET';
+    src: url('Fonts/EdwardianMediumLetPlain.woff2') format('woff2'), url('Fonts/EdwardianMediumLetPlain.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    font-family:'Edwardian Medium LET';
+    font-size: 1em;
+    color: #2A4D34;
+}
+
+p {
+    position: relative;
+}
+
+h2 {
+    font-family:'Autumn Leaves';
+    font-size: 3.5em;
+    text-align: center;
+    color: #2A4D34;
+    padding-top: 200px;
+}
+
+#map {
+    margin: auto;
+    width: 1300px;  
+}
+
+/*----------------------INTERACTIVE LOCATIONS---------------------------*/
+
+#badger {
+    width: 153.5px;
+    position: absolute;
+    top: 808.3px;
+    left: 342.45px;
+    z-index: 5;
+}
+
+#canal {
+    width: 577.75px;
+    position: absolute;
+    top: 463.25px;
+    left: 0px;
+}
+
+#mole {
+    width: 104px;
+    position: absolute;
+    top: 295px;
+    left: 760px;
+}
+
+#rat {
+    width: 97.5px;
+    position: absolute;
+    top: 430px;
+    left: 954px;
+}
+
+#toad {
+    width: 159px;
+    position: absolute;
+    top: 25px;
+    left: 201.45px;
+}
+
+#wildwood {
+    width: 613.25px;
+    position: absolute;
+    top: 622.25px;
+    left: 207.9px;
+}
+
+.visible {
+    opacity: 0;
+}
+
+#badger:hover, #canal:hover, #mole:hover, #rat:hover, #toad:hover, #wildwood:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/*----------------------TEXT POP UPS---------------------------*/
+
+#output {
+    width: 300px;
+    background: white;
+    padding: 10px;
+    text-align: center;
+    color: #2A4D34;
+    font-family: 'Edwardian Medium LET';
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    z-index: 100;
+  }
+
+#output:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid white;
+    border-top: 10px solid white;
+    border-bottom: 10px solid transparent;
+    right: 0px;
+    bottom: -19px;
+}
+
+.changed:after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid white;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid white;
+    left: 0px;
+    bottom: 0;
+    top: -19px;
+}
+
+.changed:before {
+    top: 19px;
+    z-index: -5;
+}
+
+/*----------------------QUIZ---------------------------*/
+
+#quiz {
+    background-color: #eaf0e7;
+    opacity: 0.9;
+    width: 100%;
+    height: 100%;
+    z-index: 500;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#quiz p {
+    padding-top: 10px;
+    text-align: center;
+}
+
+#true, #false {
+    padding: 1000px;
+}
+
+#continue, #nextquestion, #finish, #again {
+    font-family:'Edwardian Medium LET';
+    font-size: 1em;
+    color: #eaf0e7;
+    background-color: #2A4D34;
+    border: none;
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 43%;
+    width: 150px;
+    height: 40px;
+    border-radius: 0.15em;
+}
+
+#nextquestion {
+    margin-top: 50px;
+    margin-left: 0%;
+}
+
+#option {
+    display: none;
+}
+
+#finish, #again {
+    margin-top: 50px;
+    margin-left: 0%;
+}
+
+#continue:hover, #nextquestion:hover, #finish:hover, #again:hover {
+    background-color: #549367;
+    cursor: pointer;
+}
+
+#quiz2 {
+    text-align: center;
+    display: none;
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+#reaction {
+    position: fixed;
+    bottom: 0;
+    left: 25%;
+    width: 60%;
+    display: table;
+    table-layout: fixed;
+    border-spacing: 10px;
+}
+
+#reaction1, #reaction2, #reaction3, #reaction4, #reaction5, #reaction6, #reaction7, #reaction8 {
+    display: table-cell;
+}
+
+#sad1, #sad2, #sad3, #sad4, #sad5, #sad6, #sad7, #sad8, #happy1, #happy2, #happy3, #happy4, #happy5, #happy6, #happy7, #happy8 {
+    width: 60px;
+    position: fixed;
+    bottom: 0;
+    display: none;
+}
+
+#reward {
+    background-color: white;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    z-index: 500;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#reward img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+
+#reward:hover {
+    cursor: pointer;
+}
+
+/*----------------------WALKING---------------------------*/
+#frame {
+    height: 75px;
+    top: 355px;
+    left: 15px;
+    z-index: 70;
+    position: absolute;
+}
+
+.backwardsleft, .backwardsright, .forwardsleft, .forwardsright {
+    height: 75px;
+    top: 355px;
+    left: 15px;
+    z-index: 70;
+    position: absolute;
+    transition: transform 3s;
+}
+
+.hide {
+    opacity: 0;
+}
+
+#knot1 {
+    top: 357px;
+    left: 25px;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+}
+
+#knot2 {
+    top: 222px;
+    left: 460px;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+}
+
+#knot3 {
+    top: 637px;
+    left: 320px;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+}
+
+.disableClick {
+    pointer-events: none;
+    opacity: 0;
+}

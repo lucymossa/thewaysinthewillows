@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Autumn Leaves';
+    src: url('AutumnLeaves.woff2') format('woff2'),
+        url('AutumnLeaves.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Edwardian Medium LET';
+    src: url('EdwardianMediumLetPlain.woff2') format('woff2'),
+        url('EdwardianMediumLetPlain.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+

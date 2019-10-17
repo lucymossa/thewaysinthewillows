@@ -1,0 +1,104 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ways in the Willows</title>
+
+  <!-- ICONS -->
+  <link rel="apple-touch-icon" sizes="57x57" href="icons.ico/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="icons.ico/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="icons.ico/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="icons.ico/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="icons.ico/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="icons.ico/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons.ico/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons.ico/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons.ico/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="icons.ico/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons.ico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="icons.ico/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons.ico/favicon-16x16.png">
+  <link rel="manifest" href="icons.ico/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0">
+
+  <!-- CSS FILES -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- JAVASCRIPT FILES -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="anijs.js" type="text/javascript"></script>
+  <script src="javascript.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <!-- MAP -->
+  <div class="changed" id="output"></div>
+  <img id="map" alt="It'll load soon, I'm sure..." type="image/png" src="images/map hr.png"/>
+
+  <!-- WALKING ROUTES AND ANIMATION-->
+    <div class="backwardsleft"></div>
+    <div class="backwardsright"></div>
+    <div class="forwardsleft"></div>
+    <div class="forwardsright"></div>
+    <img id="frame" alt="(ⓛᴥⓛ)" type="image/png" src="images/frame1.png"/>
+    <div id="knot1"></div>
+    <div id="knot2"></div>
+    <div id="knot3"></div>
+  
+  <!-- LOCATIONS AND TEXT POP UPS-->
+  <div class="toggle">
+    <img id="badger" class="visible" alt="I have no idea what happened here." type="image/png" src="images/badger.png"/>
+    <img id="canal" class="visible" alt="I have no idea what happened here." type="image/png" src="images/canal.png"/>
+    <img id="mole" class="visible" alt="I have no idea what happened here." type="image/png" src="images/mole.png"/>
+    <img id="rat" class="visible" alt="I have no idea what happened here." type="image/png" src="images/rat.png"/>
+    <img id="toad" class="visible" alt="I have no idea what happened here." type="image/png" src="images/toad.png"/>
+    <img id="wildwood" class="visible" alt="I have no idea what happened here." type="image/png" src="images/wildwood.png"/>
+  </div>
+
+  <!-- QUIZ -->
+  <div id="quiz">
+    <div id="quiz1">
+      <h2>time for a quiz.</br>Have you been paying attention? ;)</h2>
+      <button id="continue">Get Started</button>
+    </div>
+        
+    <div id="quiz2">
+      <div id="questionspace"></div>
+      
+        <div id="radiobuttons">
+          <p>
+            <input id="true" type="radio" { -webkit-appearance: radio; } value="true" name="answer" checked="checked">True</input>
+            <input id="false" type="radio" { -webkit-appearance: radio; } value="false" name="answer">False</input>
+          </p>
+        </div>
+
+        <div id="proceed"><button id="nextquestion">Next Question</button></div>
+
+        <div id="options">
+          <button id="finish">Back to the map</button>
+          <button id="again">Try again</button>
+        </div>
+
+        <div id="reaction">
+          <div id="reaction1"><img id="sad1" alt=":(" type="image/png" src="images/Sad.png"/><img id="happy1" alt=":)" type="image/png" src="images/Happy.png"/></div>
+          <div id="reaction2"><img id="sad2" alt=":(" type="image/png" src="images/Sad.png"/><img id="happy2" alt=":)" type="image/png" src="images/Happy.png"/></div>
+          <div id="reaction3"><img id="sad3" alt=":(" type="image/png" src="images/Sad.png"/><img id="happy3" alt=":)" type="image/png" src="images/Happy.png"/></div>
+          <div id="reaction4"><img id="sad4" alt=":(" type="image/png" src="images/Sad.png"/><img id="happy4" alt=":)" type="image/png" src="images/Happy.png"/></div>
+          <div id="reaction5"><img id="sad5" alt=":(" type="image/png" src="images/Sad.png"/><img id="happy5" alt=":)" type="image/png" src="images/Happy.png"/></div>
+          <div id="reaction6"><img id="sad6" alt=":(" type="image/png" src="images/Sad.png"/><img id="happy6" alt=":)" type="image/png" src="images/Happy.png"/></div>
+          <div id="reaction7"><img id="sad7" alt=":(" type="image/png" src="images/Sad.png"/><img id="happy7" alt=":)" type="image/png" src="images/Happy.png"/></div>
+          <div id="reaction8"><img id="sad8" alt=":(" type="image/png" src="images/Sad.png"/><img id="happy8" alt=":)" type="image/png" src="images/Happy.png"/></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="reward">
+    <img alt="It's a photo of the four friends. Don't worry if you can't see it, it's not that cool anyways." type="image/png" src="images/Photograph.png"/>
+  </div>
+
+</body>
+</html>
